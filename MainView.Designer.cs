@@ -29,9 +29,9 @@ namespace LadderTracker
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.seasonView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeasonName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,6 @@ namespace LadderTracker
             this.tankWinButton = new System.Windows.Forms.Button();
             this.tankLossButton = new System.Windows.Forms.Button();
             this.IDSession = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDSeason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TankWin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,9 +111,9 @@ namespace LadderTracker
             // StartDate
             // 
             this.StartDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.StartDate.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.StartDate.DefaultCellStyle = dataGridViewCellStyle1;
             this.StartDate.HeaderText = "Start Date";
             this.StartDate.Name = "StartDate";
             this.StartDate.Width = 80;
@@ -135,7 +134,6 @@ namespace LadderTracker
             this.sessionView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sessionView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDSession,
-            this.IDSeason,
             this.StartTime,
             this.EndTime,
             this.TankWin,
@@ -361,19 +359,12 @@ namespace LadderTracker
             this.IDSession.Name = "IDSession";
             this.IDSession.Width = 79;
             // 
-            // IDSeason
-            // 
-            this.IDSeason.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.IDSeason.HeaderText = "Season";
-            this.IDSeason.Name = "IDSeason";
-            this.IDSeason.Width = 68;
-            // 
             // StartTime
             // 
             this.StartTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Format = "g";
-            dataGridViewCellStyle5.NullValue = null;
-            this.StartTime.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.StartTime.DefaultCellStyle = dataGridViewCellStyle2;
             this.StartTime.HeaderText = "Start Time";
             this.StartTime.Name = "StartTime";
             this.StartTime.Width = 80;
@@ -381,9 +372,9 @@ namespace LadderTracker
             // EndTime
             // 
             this.EndTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle6.Format = "g";
-            dataGridViewCellStyle6.NullValue = null;
-            this.EndTime.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.EndTime.DefaultCellStyle = dataGridViewCellStyle3;
             this.EndTime.HeaderText = "End Time";
             this.EndTime.Name = "EndTime";
             this.EndTime.Width = 77;
@@ -480,7 +471,6 @@ namespace LadderTracker
         private System.Windows.Forms.GroupBox damageGroupBox;
         private System.Windows.Forms.GroupBox supportGroupBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDSession;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDSeason;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn TankWin;

@@ -32,7 +32,7 @@ namespace LadderTracker
             this.sessionView.Rows.Clear();
             foreach (Session s in DBManager.sessions.FindAll())
             {
-                this.sessionView.Rows.Add(s.Id, s.IDSeason, s.StartTime.ToString("MM/dd/yy, hh:mm") + s.StartTime.ToString("tt"), s.EndTime.ToString("MM/dd/yy, hh:mm") + s.EndTime.ToString("tt"), s.TankWin, s.TankLoss, s.DamageWin, s.DamageLoss, s.SupportWin, s.SupportLoss);
+                this.sessionView.Rows.Add(s.Id, s.StartTime.ToString("MM/dd/yy, hh:mm") + s.StartTime.ToString("tt"), s.EndTime.ToString("MM/dd/yy, hh:mm") + s.EndTime.ToString("tt"), s.TankWin, s.TankLoss, s.DamageWin, s.DamageLoss, s.SupportWin, s.SupportLoss);
                 sessionView.Rows[sessionView.Rows.Count - 1].ReadOnly = true;
             }
             sessionView.Refresh();
@@ -176,16 +176,16 @@ namespace LadderTracker
 
             Session s = DBManager.sessions.FindById((int)sessionView.SelectedRows[0].Cells[0].Value);
 
-            s.IDSeason = (int)sessionView.SelectedRows[0].Cells[1].Value;
-            s.StartTime = DateTime.Parse(sessionView.SelectedRows[0].Cells[2].Value.ToString());
-            s.EndTime = DateTime.Parse(sessionView.SelectedRows[0].Cells[3].Value.ToString());
-            //s.TankWin = 
+            s.StartTime = DateTime.Parse(sessionView.SelectedRows[0].Cells[1].Value.ToString());
+            s.EndTime = DateTime.Parse(sessionView.SelectedRows[0].Cells[2].Value.ToString());
+            s.TankWin = Int32.Parse(sessionView.SelectedRows[0].Cells[3].Value.ToString());
+            s.TankLoss = Int32.Parse(sessionView.SelectedRows[0].Cells[4].Value.ToString());
+            s.DamageWin = Int32.Parse(sessionView.SelectedRows[0].Cells[5].Value.ToString());
+            s.DamageLoss = Int32.Parse(sessionView.SelectedRows[0].Cells[6].Value.ToString());
+            s.SupportWin = Int32.Parse(sessionView.SelectedRows[0].Cells[7].Value.ToString());
+            s.SupportLoss = Int32.Parse(sessionView.SelectedRows[0].Cells[8].Value.ToString());
 
-            /*s.SeasonName = seasonView.SelectedRows[0].Cells[1].Value.ToString();
-            s.StartDate = DateTime.Parse(seasonView.SelectedRows[0].Cells[2].Value.ToString());
-            s.EndDate = DateTime.Parse(seasonView.SelectedRows[0].Cells[3].Value.ToString());
-
-            foreach (DataGridViewRow r in seasonView.Rows)
+            foreach (DataGridViewRow r in sessionView.Rows)
             {
                 if (s.Id == (int)r.Cells[0].Value)
                 {
@@ -197,7 +197,7 @@ namespace LadderTracker
                 }
             }
 
-            DBManager.seasons.Update(s);*/
+            DBManager.sessions.Update(s);
         }
     }
 }
